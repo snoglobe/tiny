@@ -74,7 +74,10 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
         while True:
             get_in = input('> ')
-            print(interpret(parse(*lex(get_in))))
+            try:
+                print(interpret(parse(*lex(get_in))))
+            except Exception as err:
+                print(err)
     else:
         program = open(sys.argv[1]).read().split('\n')
         while line < len(program) - 1:
