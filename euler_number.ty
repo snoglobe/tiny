@@ -1,4 +1,4 @@
-;; eulers_number.ty: Approximate Euler’s number <https://oeis.org/A001113>.
+;; euler_number.ty: Approximate Euler’s number <https://oeis.org/A001113>.
 ;; Written by ~quinn@unix.lgbt, licensed CC0.
 
 ; ei: Loop counter for approximation.
