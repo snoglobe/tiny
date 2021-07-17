@@ -1,0 +1,33 @@
+;; eulers_number.ty: Approximate Euler’s number <https://oeis.org/A001113>.
+;; Written by ~quinn@unix.lgbt, licensed CC0.
+
+; ei: Loop counter for approximation.
+input ei
+
+; e: The approximation.
+e = 1
+
+; Begin approxmating.
+
+; Calculate n = ei!.
+ni = ei
+n = 1
+
+n = * n ni
+ni = - ni 1
+condition = > ni 0
+goto 16 condition
+
+; Divide 1 by n and add this to e.
+n = / 1 n
+e = + e n
+
+; Decrement ei.
+ei = - ei 1
+
+; Loop, if we haven’t finished.
+condition = > ei 0
+goto 13 condition
+
+; Print the approximation.
+print e

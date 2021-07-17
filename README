@@ -13,7 +13,7 @@ The default environment is a REPL, but you can also load a program from a file.
 Usage:
 tiny [program] 
 There are comments, but they take up entire an entire line, you can't use comments mid-line.
-The example program that calculates factorials is at factorial.ty
+Example programs are eulers_number.ty and factorial.ty
 
 --- BASICS ---
 
