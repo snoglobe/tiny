@@ -1,0 +1,29 @@
+;; hello.ty: Outputs the ASCII values of “Hello, world!”.
+;; Written by ~quinn@unix.lgbt, licensed CC0.
+
+; Define some variables for the characters.
+h = 72
+e = 101
+l = 108
+o = 111
+comma = 44
+space = 32
+w = 119
+r = 114
+d = 100
+bang = 33
+
+; Print them.
+print h
+print e
+print l
+print l
+print o
+print comma
+print space
+print w
+print o
+print r
+print l
+print d
+print bang
