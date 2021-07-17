@@ -8,7 +8,7 @@
               |___/    
 An eentsy-teensy turing-complete programming language that isn't a brainfuck to code in ;)
 I designed this to be as usable as possible, while also being as minimal as possible.
-As of the first version, it is 84 lines (in a semi-minified format), and has variables, expressions, and booleans.
+As of the first version, it is 84 lines (in a semi-minified format), and has variables, numeric expressions, booleans, and basic I/O.
 The default environment is a REPL, but you can also load a program from a file.
 Usage:
 tiny [program] 
@@ -28,6 +28,11 @@ You can also define a variable as a boolean expression:
 foo = == 1 1 
 ; true
 
+You can also define a variable as another variable:
+foo = 1
+bar = foo
+; both variables = 1
+
 You can use variables within expressions:
 foo = 5
 bar = 6
@@ -42,3 +47,8 @@ print x
 
 To get a number as input and store it in variable x:
 input x
+
+-- TODO --
+> Floating-point numbers
+> Labels instead of line numbers
+> (big MAYBE) Strings
