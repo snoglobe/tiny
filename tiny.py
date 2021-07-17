@@ -73,9 +73,15 @@ def interpret(node):
 if __name__ == "__main__":
     if len(sys.argv) == 1:
         while True:
-            get_in = input('> ')
             try:
+                get_in = input('> ')
                 print(interpret(parse(*lex(get_in))))
+            except EOFError: # the user pressed ^D
+                print('')
+                break
+            except KeyboardInterrupt: # the user pressed ^C
+                print('')
+                break
             except Exception as err:
                 print(err)
     else:
