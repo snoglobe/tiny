@@ -1,0 +1,44 @@
+  _   _             
+ | | (_)            
+ | |_ _ _ __  _   _ 
+ | __| | '_ \| | | |
+ | |_| | | | | |_| |
+  \__|_|_| |_|\__, |
+               __/ |
+              |___/    
+An eentsy-teensy turing-complete programming language that isn't a brainfuck to code in ;)
+I designed this to be as usable as possible, while also being as minimal as possible.
+As of the first version, it is 84 lines (in a semi-minified format), and has variables, expressions, and booleans.
+The default environment is a REPL, but you can also load a program from a file.
+Usage:
+tiny [program] 
+There are comments, but they take up entire an entire line, you can't use comments mid-line.
+The example program that calculates factorials is at factorial.ty
+
+--- BASICS ---
+
+To define a variable:
+foo = 9 
+
+You can also define a variable as an expression:
+; foo = 7
+foo = + 2 5 
+
+You can also define a variable as a boolean expression:
+foo = == 1 1 
+; true
+
+You can use variables within expressions:
+foo = 5
+bar = 6
+baz = + foo bar
+; baz = 11
+
+To go to line x if variable y is true (x can be a variable):
+goto x y
+
+To print variable x:
+print x
+
+To get a number as input and store it in variable x:
+input x

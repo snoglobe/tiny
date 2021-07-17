@@ -1,0 +1,12 @@
+; accept number as input
+input n
+p = 1
+
+p = * p n
+n = - n 1
+; if n is greater than zero, go back to line 5
+condition = > n 0
+goto 5 condition
+
+; print the result
+print p
